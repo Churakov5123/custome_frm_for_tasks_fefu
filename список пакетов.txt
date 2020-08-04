@@ -1,5 +1,0 @@
-composer require illuminate/database
-composer require phroute/phroute
-composer require symfony/console
-composer require symfony/var-dumper
-composer require "illuminate/events"
