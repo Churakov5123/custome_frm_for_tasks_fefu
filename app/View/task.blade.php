@@ -1,6 +1,6 @@
 <H1>TECT</H1>
-@foreach($item as $i)
-<p>{{$i['name']}} </p>
-<p>{{$i['alias']}} </p>
-<p>{{$i['children']}} </p>
+@foreach($items as $item)
+<p>{{$item->id}}</p>
+<p>{{$item->name}}</p>
+<p>{{$item->alias}}</p>
 @endforeach

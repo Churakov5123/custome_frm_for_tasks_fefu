@@ -10,9 +10,7 @@ class BaseController
 {
     public function index()
     {
-        $item = Task::all()->toArray();
-
-        return Render('task', ['item'=>$item]);
-
+        $items = Task::all();
+        return render('task', compact('items'));
     }
 }
