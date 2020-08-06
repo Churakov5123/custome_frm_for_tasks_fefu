@@ -30,6 +30,7 @@ class InsertJsonToDbCommand extends Command
         $start = microtime(true);
         $data = helpers::getJson();
         helpers::insertDb($data);
+
         $output->writeln('Start import json data '
             . date('Y-m-d H:i:s')
             . ' on '
