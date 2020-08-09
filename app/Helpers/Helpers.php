@@ -33,7 +33,7 @@ class helpers
                 "id" => $i->id,
                 "name" => $i->name,
                 "alias" => $i->alias,
-                "children" => serialize($i->children)
+                "children" => $i->children
             ];
 
             $item = new Task($arr);

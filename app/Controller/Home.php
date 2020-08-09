@@ -16,7 +16,7 @@ class Home
      */
     public function getIndex()
     {
-        $items = Task::all();
+        $items = Task::all()->toJson();
         return render('task', compact('items'));
     }
 
