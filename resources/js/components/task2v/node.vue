@@ -1,6 +1,10 @@
 <template>
     <li class="node-tree">
-        <span class="label"> {{" "}}{{node.name}}{{" "}}{{"/"}}{{node.alias}}</span>
+<!--        Выбор отрисвоки под каждый  вывод исход из задачи-->
+        <span v-if="node.alias" class="label">{{" "}}{{node.name}}{{" "}}{{"/"}}{{node.alias}}</span>
+        <span v-else class="label" >{{" "}}{{node.name}}</span>
+
+
         <tree v-if="showChildren" :nodes="childrenNodes"/>
     </li>
 </template>

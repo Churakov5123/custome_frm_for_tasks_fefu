@@ -1,5 +1,6 @@
 <template>
     <div id="app">
+
         <tree :nodes="treeData"/>
     </div>
 </template>

@@ -20,10 +20,9 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
-Vue.component('tree', require('./components/tree.vue').default);
-Vue.component('node', require('./components/node.vue').default);
-Vue.component('lol', require('./components/lol.vue').default);
-
+Vue.component('tree', require('./components/task2v/tree.vue').default);
+Vue.component('node', require('./components/task2v/node.vue').default);
+Vue.component('lol', require('./components/task2v/lol.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

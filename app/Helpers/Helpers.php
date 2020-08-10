@@ -9,7 +9,6 @@ use App\Model\Task;
  * Class helpers
  * @package App\Helpers
  */
-
 class helpers
 {
     /**
@@ -40,6 +39,22 @@ class helpers
             $item->save();
         }
 
+    }
+
+    /**
+     * @param $items
+     * @return false|string
+     */
+    public static function catData($items)
+    {
+        $newData = array();
+        foreach ($items as $key=>$item) {
+            $newData[$key]['name']= $item['name'];
+            foreach ($item['children'] as $keys=>$i) {
+                $newData[$key]['children'][$keys]['name']=  $i['name'];
+            }
+        }
+        return json_encode($newData);
     }
 
 }
