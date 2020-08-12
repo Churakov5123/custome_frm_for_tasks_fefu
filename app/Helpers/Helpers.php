@@ -48,13 +48,33 @@ class helpers
     public static function catData($items)
     {
         $newData = array();
-        foreach ($items as $key=>$item) {
-            $newData[$key]['name']= $item['name'];
-            foreach ($item['children'] as $keys=>$i) {
-                $newData[$key]['children'][$keys]['name']=  $i['name'];
+        foreach ($items as $key => $item) {
+            $newData[$key]['name'] = $item['name'];
+            foreach ($item['children'] as $keys => $i) {
+                $newData[$key]['children'][$keys]['name'] = $i['name'];
             }
         }
         return json_encode($newData);
     }
 
+    /*
+     * Cписок  name
+     */
+    public static function printNames($items)
+    {
+        $newData = array();
+        foreach ($items as $item) {
+            $newData[] = $item['name'];
+            foreach ($item['children'] as $i) {
+                $newData[] = $i['name'];
+                if (isset($i['children'])) {
+                    foreach ($i['children'] as $qw) {
+                        $newData[] = $qw['name'];
+
+                    }
+                }
+            }
+        }
+        return print_r($newData);
+    }
 }

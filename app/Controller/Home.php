@@ -22,7 +22,6 @@ class Home
         $itemsTwo = Task::all()->jsonSerialize();
 
         $newItems = helpers::catData($itemsTwo);
-
         return render('task', compact('items', 'newItems'));
     }
 
